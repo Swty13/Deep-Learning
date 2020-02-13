@@ -1,0 +1,27 @@
+How and when to use different Activation functions:-
+
+
+
+1.Linear
+
+The simplest case, no activation, the signal goes through unchanged. This is a good choice for regression problems.
+
+
+2.ReLU/ELU ----- max(0,x)
+ReLU is one of the most widely used Activation function and gives an output of X if X is positive and 0 otherwise.
+
+
+3.Softmax  ----- 𝑒𝑥𝑖∑𝑖𝑒𝑥𝑖exi∑iexi
+Softmax function is always used in the output layers that generates the output between 0 and 1.
+
+4.Tanh     -----  𝑧−1𝑒𝑧+1ez−1ez+1
+Tanh is used where we want to take output from [-1,1] range covered all scenrios .
+In some cases the sign of the output is relevant, but the magnitude can mess with the further computations. 
+Tanh is an elegant way to “squish” the output into [−1,1][−1,1] range, preserving the sign and conforming to 
+the boundary conditions 𝑓(0)=0,𝑓′(∞)=0f(0)=0,f′(∞)=0. It’s useful when after the magnitude of unprocessed output 
+grows significantly, the further growth is not that important, and vice versa, 
+when the fluctuations around zero make significant difference.
+
+
+5.Sigmoid
+A Sigmoid function is often used in the hidden layers where you are trying to predict the probability as an output (0 or 1).
